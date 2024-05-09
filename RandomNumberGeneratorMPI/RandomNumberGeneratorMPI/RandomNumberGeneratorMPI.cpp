@@ -3,7 +3,6 @@
 #include <vector>
 #include <ctime>
 
-// Metoda pătratului mijlociu
 unsigned long long midSquareRandom(unsigned long long seed, int iterations) {
     unsigned long long num = seed;
     unsigned long long result = 0;
@@ -15,7 +14,6 @@ unsigned long long midSquareRandom(unsigned long long seed, int iterations) {
     return result;
 }
 
-// Generator liniar congruențial
 unsigned long long linearCongruentialRandom(unsigned long long seed, unsigned long long a, unsigned long long c, unsigned long long m, int iterations) {
     unsigned long long num = seed;
     unsigned long long result = 0;
@@ -37,7 +35,7 @@ int main(int argc, char** argv) {
     int iterations = 5;
 
     if (rank == 0) {
-        std::cout << "Metoda pătratului mijlociu:\n";
+        std::cout << "Metoda patratului mijlociu:\n";
     }
 
     unsigned long long midSquareResult = midSquareRandom(seed, iterations);
@@ -51,7 +49,7 @@ int main(int argc, char** argv) {
     }
 
     if (rank == 0) {
-        std::cout << "\nGeneratorul liniar congruențial:\n";
+        std::cout << "\nGeneratorul liniar congruential:\n";
     }
 
     unsigned long long a = 1664525;
